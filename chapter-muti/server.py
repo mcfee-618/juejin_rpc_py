@@ -28,7 +28,6 @@ class Server:
         else:
             try:
                 message = decoder(readable_fd)
-                print(message)
                 if message == "ping":
                     self.w_fds.append(readable_fd)
             except Exception as e:
